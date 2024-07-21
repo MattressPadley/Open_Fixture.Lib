@@ -28,9 +28,15 @@ jobs:
             json:
               - 'Fixtures/**/*.json'
 
+        - name: Debug changed JSON files
+        if: steps.filter.outputs.json == 'true'
+        run: |
+          echo "Changed JSON files:"
+          echo "${{ steps.filter.outputs.json_files }}"
+
       - name: Validate changed JSON files
         if: steps.filter.outputs.json == 'true'
         run: |
           for file in $(echo ${{ steps.filter.outputs.json_files }} | jq -r '.[]'); do
-            python validate_data.py "$file"
+            python tools/validate_data.py "$file"
           done
