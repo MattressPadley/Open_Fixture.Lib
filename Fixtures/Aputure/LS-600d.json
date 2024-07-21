@@ -1,0 +1,40 @@
+{
+  "Name": "LS 600d",
+  "Manufacturer": "Aputure",
+  "Image": "https://shop.aputure.com/products/ls-600d",
+  "Dimensions": {
+    "Weight": 11.02, 
+    "Height": 12.8, 
+    "Width": 8.9
+  },
+  "Power": {
+    "AC_voltage": "100V-240V, 50Hz/60Hz",
+    "Power_Draw": 720, 
+    "DC_Port": "3-Pin XLR",
+    "DC_voltage": "48V",
+    "AC_plug": "Neutrik powerCON TRUE1 TOP",
+    "USB_Power": false,
+    "Battery_Compatible": true
+  },
+  "Optics": {
+    "Beam_Angle": "15° - 55° with Hyper Reflector and Fresnel",
+    "Color_Temp": "5600K ± 200K",
+    "Source": "LED",
+    "LED_Array": "COB",
+    "Color": false,
+    "Pixel_count": 1,
+    "Lens": "Hyper Reflector, Fresnel (optional)"
+  },
+  "Control": {
+    "crmx": true,
+    "RDM": true,
+    "Ethernet_Protocols": ["sACN", "Art-Net"],
+    "Ethernet": true,
+    "5_Pin_DMX": true,
+    "3_Pin_DMX": false
+  },
+  "Physical": {
+    "mount": "Yoke Mount",
+    "IP_Rating": "IP20"
+  }
+}
