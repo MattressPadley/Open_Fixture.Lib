@@ -1,5 +1,6 @@
 import json
 import sys
+import logging
 
 REQUIRED_BOOLEAN_FIELDS = [
     "Power.USB_Power",
@@ -11,22 +12,41 @@ REQUIRED_BOOLEAN_FIELDS = [
     "Control.3_Pin_DMX",
 ]
 
-OPTIONAL_STRING_FIELDS = [
+ALL_FIELDS = [
     "Name",
     "Manufacturer",
     "Image",
+    "Dimensions.Weight",
+    "Dimensions.Height",
+    "Dimensions.Width",
+    "Dimensions.Depth",
     "Power.AC_voltage",
+    "Power.Power_Draw",
     "Power.DC_Port",
+    "Power.DC_voltage",
     "Power.AC_plug",
+    "Power.USB_Power",
+    "Power.Battery_Compatible",
     "Optics.Beam_Angle",
     "Optics.Color_Temp",
     "Optics.Source",
     "Optics.LED_Array",
+    "Optics.Color",
+    "Optics.Pixel_count",
     "Optics.Lens",
+    "Control.crmx",
+    "Control.RDM",
     "Control.Ethernet_Protocols",
+    "Control.Ethernet",
+    "Control.5_Pin_DMX",
+    "Control.3_Pin_DMX",
     "Physical.mount",
     "Physical.IP_Rating",
 ]
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 def get_nested_field(data, field_path):
@@ -50,10 +70,10 @@ def validate_data(data):
         elif not isinstance(field_value, bool):
             errors.append(f"Invalid type for field {field}. Expected boolean.")
 
-    for field in OPTIONAL_STRING_FIELDS:
+    for field in ALL_FIELDS:
         field_value = get_nested_field(data, field)
         if field_value is None:
-            warnings.append(f"Missing optional string field: {field}")
+            warnings.append(f"Missing field: {field}")
 
     return errors, warnings
 
@@ -64,21 +84,25 @@ if __name__ == "__main__":
         sys.exit(1)
 
     data_file = sys.argv[1]
-    with open(data_file) as f:
-        data = json.load(f)
+    try:
+        with open(data_file) as f:
+            data = json.load(f)
+    except Exception as e:
+        logging.error(f"Error reading JSON file: {e}")
+        sys.exit(1)
 
     validation_errors, validation_warnings = validate_data(data)
 
     if validation_errors:
-        print("Validation Errors Found:")
+        logging.error("Validation Errors Found:")
         for error in validation_errors:
-            print(f" - {error}")
+            logging.error(f" - {error}")
         sys.exit(1)
 
     if validation_warnings:
-        print("Validation Warnings Found:")
+        logging.warning("Validation Warnings Found:")
         for warning in validation_warnings:
-            print(f" - {warning}")
+            logging.warning(f" - {warning}")
 
-    print("All validations passed!")
+    logging.info("All validations passed!")
     sys.exit(0)
