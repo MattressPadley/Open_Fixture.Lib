@@ -3,7 +3,7 @@ name: Validate Data
 on:
   pull_request:
     paths:
-      - 'Fixtures/**.json'  # Adjust the path to your data files
+      - 'Fixtures/**/*.json'  # Adjust the path to your data files
 
 jobs:
   validate:
@@ -20,5 +20,11 @@ jobs:
       - name: Install dependencies
         run: pip install jsonschema  # Add any dependencies you need
 
-      - name: Validate data
-        run: python validate_data.py path/to/your/data.json
+      - name: Validate changed JSON files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ $file == path/to/data/**/*.json ]]; then
+              echo "Validating $file"
+              python validate_data.py "$file"
+            fi
+          done
