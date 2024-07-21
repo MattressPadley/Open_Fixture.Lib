@@ -3,7 +3,7 @@ name: Validate Data
 on:
   pull_request:
     paths:
-      - 'Fixtures/**/*.json'  # Adjust the path to your data files
+      - 'Fixtures/**/*.json'
 
 jobs:
   validate:
@@ -15,10 +15,10 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Specify the Python version you need
+          python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install jsonschema  # Add any dependencies you need
+        run: pip install jsonschema
 
       - name: Filter changed JSON files
         id: filter
@@ -29,15 +29,14 @@ jobs:
               - 'Fixtures/**/*.json'
           list-files: "json"
 
-      - name: Debug changed JSON files
+      - name: Debug JSON files output
         if: steps.filter.outputs.json == 'true'
-        run: |
-          echo "Changed JSON files:"
-          echo "${{ steps.filter.outputs.json_files }}"
+        run: echo '${{ steps.filter.outputs.json_files }}'
 
       - name: Validate changed JSON files
         if: steps.filter.outputs.json == 'true'
         run: |
-          for file in $(echo ${{ steps.filter.outputs.json_files }} | jq -r '.[]'); do
+          json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
+          for file in $json_files; do
             python tools/validate_data.py "$file"
           done
