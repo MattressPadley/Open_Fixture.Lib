@@ -20,11 +20,17 @@ jobs:
       - name: Install dependencies
         run: pip install jsonschema  # Add any dependencies you need
 
+      - name: Filter changed JSON files
+        id: filter
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            json:
+              - 'Fixtures/**/*.json'
+
       - name: Validate changed JSON files
+        if: steps.filter.outputs.json == 'true'
         run: |
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            if [[ $file == path/to/data/**/*.json ]]; then
-              echo "Validating $file"
-              python validate_data.py "$file"
-            fi
+          for file in $(echo ${{ steps.filter.outputs.json_files }} | jq -r '.[]'); do
+            python validate_data.py "$file"
           done
