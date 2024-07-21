@@ -38,5 +38,5 @@ jobs:
         run: |
           json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
           for file in $json_files; do
-            python tools/validate_data.py "$file"
+            python tests/validate_data.py "$file"
           done
