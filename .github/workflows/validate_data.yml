@@ -22,11 +22,12 @@ jobs:
 
       - name: Filter changed JSON files
         id: filter
-        uses: dorny/paths-filter@v2
+        uses: dorny/paths-filter@v3
         with:
           filters: |
             json:
               - 'Fixtures/**/*.json'
+          list-files: "json"
 
       - name: Debug changed JSON files
         if: steps.filter.outputs.json == 'true'
