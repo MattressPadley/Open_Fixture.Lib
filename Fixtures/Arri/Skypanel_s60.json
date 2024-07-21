@@ -1,0 +1,40 @@
+{
+  "Name": "SkyPanel S60-C",
+  "Manufacturer": "ARRI",
+  "Image": "https://www.arri.com/resource/blob/50340/419a3d8714ec94113cbe10619cdbb812/arri-skypanel-s60-c--skypanel-family--1--data.jpg",
+  "Dimensions": {
+    "Weight": 27.8,
+    "Height": 17.0,
+    "Width": 32.5,
+    "Depth": 5.2
+  },
+  "Power": {
+    "AC_voltage": "100-250 VAC, 50/60 Hz",
+    "Power_Draw": 400,
+    "DC_voltage": "48 VDC",
+    "AC_plug": "Standard",
+    "USB_Power": false,
+    "Battery_Compatible": true
+  },
+  "Optics": {
+    "Beam_Angle": "105",
+    "Color_Temp": "2800-10000K",
+    "Source": "LED",
+    "LED_Array": "RGBW",
+    "Color": true,
+    "Pixel_count": 1,
+    "Lens": "Swappable Soft Diffusion Panel"
+  },
+  "Control": {
+    "crmx": false,
+    "RDM": true,
+    "Ethernet_Protocols": "Art-Net",
+    "Ethernet": true,
+    "5_Pin_DMX": true,
+    "3_Pin_DMX": false
+  },
+  "Physical": {
+    "mount": "28 mm Spigot (Junior Pin)",
+    "IP_Rating": "IP20"
+  }
+}
