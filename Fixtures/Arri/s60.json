@@ -3,14 +3,12 @@
   "Manufacturer": "Aputure",
   "Image": "https://shop.aputure.com/products/ls-600d",
   "Dimensions": {
-    "Weight": 11.02, // Lamp head weight in pounds
-    "Height": 12.8, // Height in inches
-    "Width": 8.9, // Width in inches
-    "Depth": 6.5 // Depth in inches
+    "Weight": 11.02,
+    "Depth": 6.5 
   },
   "Power": {
     "AC_voltage": "100V-240V, 50Hz/60Hz",
-    "Power_Draw": 720, // Power draw in watts
+    "Power_Draw": 720,
     "DC_Port": "3-Pin XLR",
     "DC_voltage": "48V",
     "AC_plug": "Neutrik powerCON TRUE1 TOP",
