@@ -71,11 +71,11 @@ def format_markdown(warnings, filename, schema_error=None):
     output.append(f"## Validation Report for {filename}")
     output.append(f" {timestamp}")
     if schema_error:
-        output.append(f":x: ### Validation Errors {filename} :x:")
+        output.append(f"### :x: Validation Errors {filename} :x:")
         for schema_error in schema_error:
             output.append(f" - {schema_error}")
     if warnings:
-        output.append(f":warning: ### Validation Warnings :warning:")
+        output.append(f"### :warning: Validation Warnings :warning:")
         for warning in warnings:
             output.append(f" - {warning}")
 
