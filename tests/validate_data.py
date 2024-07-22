@@ -5,26 +5,14 @@ from jsonschema import Draft7Validator
 
 
 ALL_FIELDS = [
-    "Name",
-    "Manufacturer",
     "Image",
-    "Dimensions.Weight",
-    "Dimensions.Height",
-    "Dimensions.Width",
-    "Dimensions.Depth",
-    "Power.AC_voltage",
-    "Power.Power_Draw",
+    "Manual",
     "Power.DC_Port",
     "Power.DC_voltage",
-    "Power.AC_plug",
     "Optics.Beam_Angle",
-    "Optics.Color_Temp",
-    "Optics.Source",
     "Optics.LED_Array",
-    "Optics.Color",
     "Optics.Pixel_count",
     "Optics.Lens",
-    "Physical.mount",
     "Physical.IP_Rating",
 ]
 

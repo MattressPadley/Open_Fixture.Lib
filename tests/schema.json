@@ -137,8 +137,6 @@
   "required": [
     "Name",
     "Manufacturer",
-    "Image",
-    "Manual",
     "Dimensions",
     "Power",
     "Optics",
