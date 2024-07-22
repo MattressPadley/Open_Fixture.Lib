@@ -15,7 +15,7 @@
         "DC_Port": "3-Pin XLR",
         "DC_voltage": "48V",
         "AC_plug": "Edison",
-        "USB_Port": false
+        "USB_Port": true
     },
     "Optics": {
         "Beam_Angle": "20\u00b0",
