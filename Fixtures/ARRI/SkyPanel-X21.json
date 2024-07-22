@@ -1,0 +1,41 @@
+{
+    "Name": "SkyPanel X21",
+    "Manufacturer": "ARRI",
+    "Image": "https://www.arri.com/resource/blob/63104/681a9ed4a07b90e34655a20baef7c63f/23100128-skypanel-x21-data.pdf",
+    "Manual": "https://www.arri.com/resource/blob/63104/681a9ed4a07b90e34655a20baef7c63f/23100128-skypanel-x21-data.pdf",
+    "Dimensions": {
+        "Weight": 33,
+        "Height": 29.1,
+        "Width": 13.3,
+        "Depth": 6.1
+    },
+    "Power": {
+        "AC_voltage": "100-240V",
+        "Power_Draw": 800,
+        "DC_Port": "XLR",
+        "DC_voltage": "54V",
+        "AC_plug": "TRUE1",
+        "USB_Power": false,
+        "Battery_Compatible": false
+    },
+    "Optics": {
+        "Beam_Angle": "105\u00b0",
+        "Color_Temp": "1500K-20000K",
+        "Source": "LED",
+        "LED_Array": "RGBACL",
+        "Color": true,
+        "Pixel_count": 8,
+        "Lens": "HyPer Optic"
+    },
+    "Control": {
+        "CRMX": true,
+        "RDM": true,
+        "Ethernet": true,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Junior Pin",
+        "IP_Rating": "IP66"
+    }
+}
