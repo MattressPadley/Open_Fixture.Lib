@@ -1,0 +1,44 @@
+{
+    "Name": "SkyPanel S30-C",
+    "Manufacturer": "ARRI",
+    "Image": "https://www.arri.com/resource/blob/30592/5db8050e522b29aa44c8c00d83943cf5/80-0006799--skypanel-s30-c--data.pdf",
+    "Dimensions": {
+        "Weight": 14.3,
+        "Height": 14,
+        "Width": 11.8,
+        "Depth": 5.2
+    },
+    "Power": {
+        "AC_voltage": "100-240V",
+        "Power_Draw": 200,
+        "DC_Port": "3-Pin XLR",
+        "DC_voltage": "48V",
+        "AC_plug": "IEC",
+        "USB_Power": false,
+        "Battery_Compatible": true
+    },
+    "Optics": {
+        "Beam_Angle": "105",
+        "Color_Temp": "2800-10000K",
+        "Source": "LED",
+        "LED_Array": "RGBW",
+        "Color": true,
+        "Pixel_count": 1,
+        "Lens": "Swappable Soft Diffusion Panels"
+    },
+    "Control": {
+        "crmx": false,
+        "RDM": true,
+        "Ethernet_Protocols": [
+            "sACN",
+            "Art-Net"
+        ],
+        "Ethernet": true,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "28 mm Spigot (Junior Pin)",
+        "IP_Rating": "IP20"
+    }
+}
