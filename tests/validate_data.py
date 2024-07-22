@@ -60,7 +60,7 @@ def validate_data(data):
     for field in ALL_FIELDS:
         field_value = get_nested_field(data, field)
         if field_value is None:
-            warnings.append(f"Missing field: {field}")
+            warnings.append(f"Missing optional field: {field}")
 
     return  warnings
 
@@ -68,13 +68,14 @@ def validate_data(data):
 def format_markdown(warnings, filename, schema_error=None):
     output = []
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    output.append(f"## Validation Report - {timestamp}")
+    output.append(f"## Validation Report for {filename}")
+    output.append(f" {timestamp}")
     if schema_error:
-        output.append(f"### Validation Error in {filename} :x:")
+        output.append(f":x: ### Validation Errors {filename} :x:")
         for schema_error in schema_error:
             output.append(f" - {schema_error}")
     if warnings:
-        output.append(f"### Validation Warnings in {filename} :warning:")
+        output.append(f":warning: ### Validation Warnings :warning:")
         for warning in warnings:
             output.append(f" - {warning}")
 
