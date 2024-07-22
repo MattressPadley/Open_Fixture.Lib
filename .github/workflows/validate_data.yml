@@ -18,7 +18,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-
+     
+      - name: Install jsonschema
+        run: pip install jsonschema
+     
       - name: Install jq (if needed)
         run: sudo apt-get install jq
 
@@ -41,10 +44,11 @@ jobs:
         run: |
           json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
           output_file="validation_output.md"
+          schema_file="tests/schema.json"
           > $output_file
           all_passed=true
           for file in $json_files; do
-            python tests/validate_data.py "$file" "$output_file" || all_passed=false
+            python tests/validate_data.py "$file" "$schema_file" "$output_file" || all_passed=false
           done
           echo "all_passed=$all_passed" >> $GITHUB_ENV
         shell: bash
