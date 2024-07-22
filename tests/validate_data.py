@@ -1,17 +1,8 @@
 import json
 import sys
-import jsonschema
-from jsonschema import validate
+import time
+from jsonschema import Draft7Validator
 
-REQUIRED_BOOLEAN_FIELDS = [
-    "Power.USB_Port",
-    "Power.Internal_battery",
-    "Control.CRMX",
-    "Control.RDM",
-    "Control.Ethernet",
-    "Control.5_Pin_DMX",
-    "Control.3_Pin_DMX",
-]
 
 ALL_FIELDS = [
     "Name",
@@ -49,47 +40,45 @@ def get_nested_field(data, field_path):
 
 
 def validate_json(data, schema):
-    try:
-        validate(instance=data, schema=schema)
-    except jsonschema.exceptions.ValidationError as err:
-        return False, str(err)
-    return True, ""
+    validator = Draft7Validator(schema)
+    errors = list(validator.iter_errors(data))
+    if errors:
+        return False, errors
+    return True, []
+
+def format_schema_errors(errors):
+    formatted_errors = []
+    for error in errors:
+        formatted_errors.append(
+            f"{'.'.join(map(str, error.path))}: {error.message}"
+        )
+    return formatted_errors
 
 
 def validate_data(data):
-    errors = []
     warnings = []
-
-    for field in REQUIRED_BOOLEAN_FIELDS:
-        field_value = get_nested_field(data, field)
-        if field_value is None:
-            errors.append(f"Missing required boolean field: {field}")
-        elif not isinstance(field_value, bool):
-            errors.append(f"Invalid type for field {field}. Expected boolean.")
-
     for field in ALL_FIELDS:
         field_value = get_nested_field(data, field)
         if field_value is None:
             warnings.append(f"Missing field: {field}")
 
-    return errors, warnings
+    return  warnings
 
 
-def format_markdown(errors, warnings, filename, schema_error=None):
+def format_markdown(warnings, filename, schema_error=None):
     output = []
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    output.append(f"### Validation Report - {timestamp}")
     if schema_error:
-        output.append(f"### Schema Validation Error in {filename} :x:")
-        output.append(f" - **{schema_error}**")
-    if errors:
-        output.append(f"### Validation Errors in {filename} :x:")
-        for error in errors:
-            output.append(f" - **{error}**")
+        output.append(f"## Schema Validation Error in {filename} :x:")
+        for schema_error in schema_error:
+            output.append(f" - {schema_error}")
     if warnings:
-        output.append(f"### Validation Warnings in {filename} :warning:")
+        output.append(f"## Validation Warnings in {filename} :warning:")
         for warning in warnings:
-            output.append(f" - *{warning}*")
+            output.append(f" - {warning}")
 
-    if not errors and not warnings and not schema_error:
+    if not warnings and not schema_error:
         output.append(f"### All validations passed for {filename} :white_check_mark:")
 
     return "\n".join(output)
@@ -108,17 +97,20 @@ def main(file, schema_file, output_file):
     except Exception as e:
         return f"Error reading JSON schema file {schema_file}: {e}"
 
-    is_valid, schema_error = validate_json(data, schema)
+    is_valid, schema_errors = validate_json(data, schema)
 
-    errors, warnings = validate_data(data)
+    warnings = validate_data(data)
+    schema_error_messages = (
+        format_schema_errors(schema_errors) if not is_valid else None
+    )
     markdown_output = format_markdown(
-        errors, warnings, file, schema_error if not is_valid else None
+        warnings, file, schema_error_messages if not is_valid else None
     )
 
     with open(output_file, "a") as f:
         f.write(markdown_output + "\n\n")
 
-    if errors or schema_error:
+    if schema_errors:
         return 1
     else:
         return 0
