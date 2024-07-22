@@ -1,0 +1,40 @@
+{
+    "Name": "Vortex4",
+    "Manufacturer": "Creamsource",
+    "Image": "https://creamsource.com/wp-content/uploads/2021/11/vortex4_ip65_720p.mp4",
+    "Manual": "https://creamsource.com/wp-content/downloads/manuals/Vortex8-User-Guide-1.2.1.pdf",
+    "Dimensions": {
+        "Weight": 23.6,
+        "Height": 22.4,
+        "Width": 20.7,
+        "Depth": 7.1
+    },
+    "Power": {
+        "AC_voltage": "100-240V",
+        "Power_Draw": 325,
+        "DC_Port": "3-Pin XLR",
+        "DC_voltage": "48V",
+        "AC_plug": "Edison",
+        "USB_Port": true
+    },
+    "Optics": {
+        "Beam_Angle": "20\u00b0",
+        "Color_Temp": "2200K-15000K",
+        "Source": "LED",
+        "LED_Array": "RRGBBW",
+        "Color": true,
+        "Pixel_count": 1,
+        "Lens": "20\u00b0 Native, 110\u00b0 With Diffusion"
+    },
+    "Control": {
+        "CRMX": true,
+        "RDM": true,
+        "Ethernet": true,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Baby Pin",
+        "IP_Rating": "IP65"
+    }
+}
