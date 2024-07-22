@@ -2,7 +2,7 @@
     "Name": "Vortex4",
     "Manufacturer": "Creamsource",
     "Image": "https://creamsource.com/wp-content/uploads/2021/11/vortex4_ip65_720p.mp4",
-    "Manual": "https://knowledge.creamsource.com",
+    "Manual": "https://creamsource.com/wp-content/downloads/manuals/Vortex8-User-Guide-1.2.1.pdf",
     "Dimensions": {
         "Weight": 23.6,
         "Height": 22.4,
@@ -15,7 +15,7 @@
         "DC_Port": "3-Pin XLR",
         "DC_voltage": "48V",
         "AC_plug": "Edison",
-        "USB_Port": false
+        "USB_Port": true
     },
     "Optics": {
         "Beam_Angle": "20\u00b0",
@@ -24,7 +24,7 @@
         "LED_Array": "RRGBBW",
         "Color": true,
         "Pixel_count": 1,
-        "Lens": "20\u00b0 Native, 110\u00b0 Open Face"
+        "Lens": "20\u00b0 Native, 110\u00b0 With Diffusion"
     },
     "Control": {
         "CRMX": true,
