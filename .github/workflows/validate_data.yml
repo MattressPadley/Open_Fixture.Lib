@@ -47,9 +47,7 @@ jobs:
             output+="$file:\n$validation_output\n\n"
           done
           echo "$output" > validation_output.txt
-          if [ "$all_passed" = false ]; then
-            exit 1
-          fi
+          echo "all_passed=$all_passed" >> $GITHUB_ENV
         shell: bash
 
       - name: Comment on PR with validation results
@@ -57,3 +55,8 @@ jobs:
         uses: mshick/add-pr-comment@v2
         with:
           message-path: validation_output.txt
+
+      - name: Fail job if validation failed
+        if: steps.filter.outputs.json == 'true' && env.all_passed == 'false'
+        run: exit 1
+        shell: bash
