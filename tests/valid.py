@@ -3,11 +3,13 @@ import sys
 
 REQUIRED_BOOLEAN_FIELDS = [
     "Power.USB_Port",
+    "Power.Internal_battery",
     "Control.CRMX",
     "Control.RDM",
     "Control.Ethernet",
     "Control.5_Pin_DMX",
     "Control.3_Pin_DMX",
+    
 ]
 
 ALL_FIELDS = [
