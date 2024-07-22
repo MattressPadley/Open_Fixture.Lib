@@ -5,15 +5,13 @@
     "Manual": "https://www.arri.com/resource/blob/113369/0ef79d3a2ed3120b8f7461c9a60a2c9c/ARRI-M40-data.pdf",
     "Dimensions": {
         "Weight": 44,
-        "Height": 27.8,
+        "Height": 33,
         "Width": 19.9,
         "Depth": 20.6
     },
     "Power": {
-        "AC_voltage": "200-250V",
+        "AC_voltage": "200V / 115V",
         "Power_Draw": 4000,
-        "DC_Port": null,
-        "DC_voltage": null,
         "AC_plug": "60a 120v Bates",
         "USB_Port": false,
         "Internal_battery": false
@@ -22,14 +20,12 @@
         "Beam_Angle": "18\u00b0-52\u00b0",
         "Color_Temp": "6000K",
         "Source": "HMI",
-        "LED_Array": null,
         "Color": false,
-        "Pixel_count": 1,
-        "Lens": "Open Face"
+        "Lens": "14-inch Open Face ArriMAX Reflector"
     },
     "Control": {
         "CRMX": false,
-        "RDM": true,
+        "RDM": false,
         "Ethernet": false,
         "5_Pin_DMX": true,
         "3_Pin_DMX": false
