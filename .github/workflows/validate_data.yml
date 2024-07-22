@@ -44,7 +44,7 @@ jobs:
         run: |
           json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
           output_file="validation_output.md"
-          schema_file="path/to/your/schema.json"
+          schema_file="tests/schema.json"
           > $output_file
           all_passed=true
           for file in $json_files; do
