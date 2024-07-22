@@ -5,16 +5,16 @@
     "Manual": "https://www.fiilex.com/downloads/Q10_Color_Manual.pdf",
     "Dimensions": {
         "Weight": 44,
-        "Height": 19.8,
+        "Height": 25.1,
         "Width": 18.1,
-        "Depth": 10.8
+        "Depth": 19.8
     },
     "Power": {
         "AC_voltage": "100-240V AC, 50-60Hz",
         "Power_Draw": 900,
         "DC_Port": "powerCON 32A",
         "DC_voltage": "48V DC",
-        "AC_plug": "powerCON TRUE1",
+        "AC_plug": "Edison",
         "USB_Port": true,
         "Internal_battery": false
     },
@@ -24,7 +24,6 @@
         "Source": "LED",
         "LED_Array": "RGBW",
         "Color": true,
-        "Pixel_count": 1,
         "Lens": "10 inch Fresnel"
     },
     "Control": {
@@ -35,7 +34,7 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Combo (baby stud female / junior stud male)",
+        "mount": "Junior Pin",
         "IP_Rating": "IP-X5"
     }
 }
