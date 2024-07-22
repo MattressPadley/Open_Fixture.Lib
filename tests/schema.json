@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fixture Schema",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+    "Manufacturer": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Manual": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Dimensions": {
+      "type": "object",
+      "properties": {
+        "Weight": {
+          "type": "number"
+        },
+        "Height": {
+          "type": "number"
+        },
+        "Width": {
+          "type": "number"
+        },
+        "Depth": {
+          "type": "number"
+        }
+      },
+      "required": ["Weight", "Height", "Width", "Depth"]
+    },
+    "Power": {
+      "type": "object",
+      "properties": {
+        "AC_voltage": {
+          "type": "string"
+        },
+        "Power_Draw": {
+          "type": "number"
+        },
+        "DC_Port": {
+          "type": "string"
+        },
+        "DC_voltage": {
+          "type": "string"
+        },
+        "AC_plug": {
+          "type": "string"
+        },
+        "USB_Port": {
+          "type": "boolean"
+        },
+        "Internal_battery": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "AC_voltage",
+        "Power_Draw",
+        "AC_plug",
+        "USB_Port",
+        "Internal_battery"
+      ]
+    },
+    "Optics": {
+      "type": "object",
+      "properties": {
+        "Beam_Angle": {
+          "type": "string"
+        },
+        "Color_Temp": {
+          "type": "string"
+        },
+        "Source": {
+          "type": "string"
+        },
+        "LED_Array": {
+          "type": "string"
+        },
+        "Color": {
+          "type": "boolean"
+        },
+        "Pixel_count": {
+          "type": "number"
+        },
+        "Lens": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Beam_Angle",
+        "Color_Temp",
+        "Source",
+        "Color"
+      ]
+    },
+    "Control": {
+      "type": "object",
+      "properties": {
+        "CRMX": {
+          "type": "boolean"
+        },
+        "RDM": {
+          "type": "boolean"
+        },
+        "Ethernet": {
+          "type": "boolean"
+        },
+        "5_Pin_DMX": {
+          "type": "boolean"
+        },
+        "3_Pin_DMX": {
+          "type": "boolean"
+        }
+      },
+      "required": ["CRMX", "RDM", "Ethernet", "5_Pin_DMX", "3_Pin_DMX"]
+    },
+    "Physical": {
+      "type": "object",
+      "properties": {
+        "mount": {
+          "type": "string"
+        },
+        "IP_Rating": {
+          "type": "string"
+        }
+      },
+      "required": ["mount"]
+    }
+  },
+  "required": [
+    "Name",
+    "Manufacturer",
+    "Image",
+    "Manual",
+    "Dimensions",
+    "Power",
+    "Optics",
+    "Control",
+    "Physical"
+  ]
+}
