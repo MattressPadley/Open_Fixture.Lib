@@ -4,18 +4,19 @@
     "Image": "https://www.arri.com/resource/image/48272/portrait_ratio1x1/540/540/29f7457812e65ba24d42e4b503df72f9/xw/skypanel-s120-c-540x540.jpg",
     "Manual": "https://www.arri.com/resource/blob/104832/575da14de5b5b79248c254c4fae6374f/arri-skypanel-user-manual-en-data.pdf",
     "Dimensions": {
-        "Weight": 36.8,
-        "Height": 50.8,
-        "Width": 11.8,
+        "Weight": 36.4,
+        "Height": 23.1,
+        "Width": 57.7,
         "Depth": 5.2
     },
     "Power": {
         "AC_voltage": "100-240V",
         "Power_Draw": 400,
-        "DC_Port": "XLR-3pin",
-        "DC_voltage": "24-36V",
+        "DC_Port": "XLR 4-pin",
+        "DC_voltage": "48V",
         "AC_plug": "Edison",
-        "USB_Port": false
+        "USB_Port": true,
+        "Internal_battery": false
     },
     "Optics": {
         "Beam_Angle": "105\u00b0",
@@ -23,11 +24,10 @@
         "Source": "LED",
         "LED_Array": "RGBW",
         "Color": true,
-        "Pixel_count": 1,
-        "Lens": "Swappable Soft Diffusion Panel"
+        "Pixel_count": 4
     },
     "Control": {
-        "CRMX": true,
+        "CRMX": false,
         "RDM": true,
         "Ethernet": true,
         "5_Pin_DMX": true,
