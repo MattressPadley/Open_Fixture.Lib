@@ -1,5 +1,7 @@
 import json
 import sys
+import jsonschema
+from jsonschema import validate
 
 REQUIRED_BOOLEAN_FIELDS = [
     "Power.USB_Port",
@@ -46,6 +48,14 @@ def get_nested_field(data, field_path):
     return data
 
 
+def validate_json(data, schema):
+    try:
+        validate(instance=data, schema=schema)
+    except jsonschema.exceptions.ValidationError as err:
+        return False, str(err)
+    return True, ""
+
+
 def validate_data(data):
     errors = []
     warnings = []
@@ -65,8 +75,11 @@ def validate_data(data):
     return errors, warnings
 
 
-def format_markdown(errors, warnings, filename):
+def format_markdown(errors, warnings, filename, schema_error=None):
     output = []
+    if schema_error:
+        output.append(f"### Schema Validation Error in {filename} :x:")
+        output.append(f" - **{schema_error}**")
     if errors:
         output.append(f"### Validation Errors in {filename} :x:")
         for error in errors:
@@ -76,37 +89,50 @@ def format_markdown(errors, warnings, filename):
         for warning in warnings:
             output.append(f" - *{warning}*")
 
-    if not errors and not warnings:
+    if not errors and not warnings and not schema_error:
         output.append(f"### All validations passed for {filename} :white_check_mark:")
 
     return "\n".join(output)
 
 
-def main(file, output_file):
+def main(file, schema_file, output_file):
     try:
         with open(file) as f:
             data = json.load(f)
     except Exception as e:
         return f"Error reading JSON file {file}: {e}"
 
+    try:
+        with open(schema_file) as f:
+            schema = json.load(f)
+    except Exception as e:
+        return f"Error reading JSON schema file {schema_file}: {e}"
+
+    is_valid, schema_error = validate_json(data, schema)
+
     errors, warnings = validate_data(data)
-    markdown_output = format_markdown(errors, warnings, file)
+    markdown_output = format_markdown(
+        errors, warnings, file, schema_error if not is_valid else None
+    )
 
     with open(output_file, "a") as f:
         f.write(markdown_output + "\n\n")
 
-    if errors:
+    if errors or schema_error:
         return 1
     else:
         return 0
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python validate_data.py <data_file.json> <output_file.md>")
+    if len(sys.argv) != 4:
+        print(
+            "Usage: python validate_data.py <data_file.json> <schema_file.json> <output_file.md>"
+        )
         sys.exit(1)
 
     file = sys.argv[1]
-    output_file = sys.argv[2]
-    result = main(file, output_file)
+    schema_file = sys.argv[2]
+    output_file = sys.argv[3]
+    result = main(file, schema_file, output_file)
     sys.exit(result)
