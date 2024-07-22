@@ -34,7 +34,7 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Combo Junior Pin/Baby Pin",
+        "mount": "Combo Junior pin/Baby receiver",
         "IP_Rating": "IP20"
     }
 }
