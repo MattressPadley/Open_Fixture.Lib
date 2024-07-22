@@ -6,13 +6,12 @@
     "Dimensions": {
         "Weight": 3,
         "Height": 5,
-        "Width": 3.31,
+        "Width": 3.3,
         "Depth": 5.5
     },
     "Power": {
         "AC_voltage": "120/240",
         "Power_Draw": 200,
-        "DC_Port": "Double contact bayonet",
         "DC_voltage": "120/240",
         "AC_plug": "Edison",
         "USB_Port": false,
@@ -20,8 +19,9 @@
     },
     "Optics": {
         "Beam_Angle": "22\u00b0 to 57\u00b0",
-        "Source": "Incandescent",
-        "Lens": "2 inch Borosilicate Glass Fresnel",
+        "Source": "Tungsten",
+        "Color_Temp": 3200,
+        "Lens": "2 inch Fresnel",
         "Color": false,
         "Pixel_count": 1
     },
@@ -33,7 +33,6 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "5/8 inch spud",
-        "IP_Rating": "Not specified"
+        "mount": "Baby Receiver"
     }
 }
