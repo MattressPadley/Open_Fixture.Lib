@@ -22,8 +22,7 @@
         "Source": "LED",
         "LED_Array": "RGBW",
         "Color": true,
-        "Pixel_count": 1,
-        "Lens": "Swappable Soft Diffusion Panel"
+        "Pixel_count": 12
     },
     "Control": {
         "CRMX": true,
