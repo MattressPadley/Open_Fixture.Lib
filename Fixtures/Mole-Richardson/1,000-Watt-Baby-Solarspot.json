@@ -1,0 +1,39 @@
+{
+    "Name": "1,000 Watt Baby Solarspot",
+    "Manufacturer": "Mole-Richardson",
+    "Image": "https://www.mole.com/wp-content/uploads/2020/07/407-Head.jpg",
+    "Manual": "https://www.mole.com/wp-content/uploads/2020/07/407_specs.pdf",
+    "Dimensions": {
+        "Weight": 13.75,
+        "Height": 11.25,
+        "Width": 8.625,
+        "Depth": 10.5
+    },
+    "Power": {
+        "AC_voltage": "120/240",
+        "Power_Draw": 1000,
+        "DC_Port": "Medium Bi-post",
+        "DC_voltage": "120/240",
+        "AC_plug": "Edison",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "15\u00b0 to 58\u00b0",
+        "Source": "Incandescent",
+        "Lens": "6 inch Fresnel",
+        "Color": false,
+        "Pixel_count": 1
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": false,
+        "Ethernet": false,
+        "5_Pin_DMX": false,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "5/8 inch spud",
+        "IP_Rating": "Not specified"
+    }
+}
