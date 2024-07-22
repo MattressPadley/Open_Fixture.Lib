@@ -4,18 +4,19 @@
     "Image": "https://www.arri.com/resource/image/48258/portrait_ratio1x1/540/540/3eab0b0e3e96b8cb0047093132e0f7cf/xw/skypanel-s30-c-540x540.jpg",
     "Manual": "https://www.arri.com/resource/blob/104832/575da14de5b5b79248c254c4fae6374f/arri-skypanel-user-manual-en-data.pdf",
     "Dimensions": {
-        "Weight": 15.9,
-        "Height": 14,
-        "Width": 11.8,
+        "Weight": 17.0,
+        "Height": 19.6,
+        "Width": 19.9,
         "Depth": 5.2
     },
     "Power": {
         "AC_voltage": "100-240V",
         "Power_Draw": 200,
-        "DC_Port": "XLR-3pin",
+        "DC_Port": "XLR 4-pin",
         "DC_voltage": "24-36V",
         "AC_plug": "Edison",
-        "USB_Port": false
+        "USB_Port": false,
+        "Internal_battery": false
     },
     "Optics": {
         "Beam_Angle": "105\u00b0",
@@ -23,18 +24,17 @@
         "Source": "LED",
         "LED_Array": "RGBW",
         "Color": true,
-        "Pixel_count": 1,
-        "Lens": "Swappable Soft Diffusion Panel"
+        "Pixel_count": 1
     },
     "Control": {
-        "CRMX": true,
+        "CRMX": false,
         "RDM": true,
         "Ethernet": true,
         "5_Pin_DMX": true,
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Baby Pin",
+        "mount": "Combo Junior Pin/Baby Pin",
         "IP_Rating": "IP20"
     }
 }
