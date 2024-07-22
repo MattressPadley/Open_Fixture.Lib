@@ -69,7 +69,7 @@ def format_markdown(warnings, filename, schema_error=None):
     output = []
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
     output.append(f"## Validation Report for:")
-    output.append(f"### {filename}")
+    output.append(f"## {filename}")
     output.append(f" {timestamp}")
     if schema_error:
         output.append(f"### :x: Validation Errors {filename} :x:")
