@@ -5,16 +5,16 @@
     "Manual": "https://www.fiilex.com/downloads/Q3_Color_Manual.pdf",
     "Dimensions": {
         "Weight": 4.5,
-        "Height": 5.7,
+        "Height": 9,
         "Width": 6.8,
-        "Depth": 9
+        "Depth": 5.7
     },
     "Power": {
         "AC_voltage": "100-240V AC, 50-60Hz",
         "Power_Draw": 90,
         "DC_Port": "5.5mm x 2.5mm Barrel",
         "DC_voltage": "14-30V DC",
-        "AC_plug": "Standard Plug",
+        "AC_plug": "Edison",
         "USB_Port": true,
         "Internal_battery": false
     },
@@ -24,7 +24,6 @@
         "Source": "LED",
         "LED_Array": "RGBW",
         "Color": true,
-        "Pixel_count": 1,
         "Lens": "5 inch Fresnel"
     },
     "Control": {
@@ -35,7 +34,7 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "5/8\" receiver",
+        "mount": "Baby receiver",
         "IP_Rating": "IP-X5"
     }
 }
