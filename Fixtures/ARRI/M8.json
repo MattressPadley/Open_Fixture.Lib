@@ -1,0 +1,41 @@
+{
+    "Name": "M8",
+    "Manufacturer": "ARRI",
+    "Image": "https://www.arri.com/resource/blob/40390/7472ee1cc7b8f2d3de77e173dd4c4a92/M8-Press-Images-13.jpg",
+    "Manual": "https://www.arri.com/resource/blob/113364/7b5f4eeb95a4c64c2538d3c8a0d5e849/ARRI-M8-data.pdf",
+    "Dimensions": {
+        "Weight": 15.6,
+        "Height": 11.8,
+        "Width": 9.6,
+        "Depth": 13.4
+    },
+    "Power": {
+        "AC_voltage": "90-125V / 180-250V",
+        "Power_Draw": 800,
+        "DC_Port": "3-pin XLR",
+        "DC_voltage": "23-36V",
+        "AC_plug": "Edison",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "20\u00b0-60\u00b0",
+        "Color_Temp": "6000K",
+        "Source": "HMI",
+        "LED_Array": null,
+        "Color": false,
+        "Pixel_count": 1,
+        "Lens": "Fresnel"
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": true,
+        "Ethernet": false,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Baby Pin",
+        "IP_Rating": "IP23"
+    }
+}
