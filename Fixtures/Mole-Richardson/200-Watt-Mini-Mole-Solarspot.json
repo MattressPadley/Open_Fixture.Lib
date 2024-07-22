@@ -4,15 +4,14 @@
     "Image": "https://www.mole.com/wp-content/uploads/2020/07/2801.jpg",
     "Manual": "https://www.mole.com/wp-content/uploads/2020/07/2801_specs.pdf",
     "Dimensions": {
-        "Weight": 4.75,
-        "Height": 6.25,
+        "Weight": 4.7,
+        "Height": 6.2,
         "Width": 4,
-        "Depth": 6.125
+        "Depth": 6.1
     },
     "Power": {
         "AC_voltage": "120/240",
         "Power_Draw": 200,
-        "DC_Port": "Double contact bayonet",
         "DC_voltage": "120/240",
         "AC_plug": "Edison",
         "USB_Port": false,
@@ -20,10 +19,10 @@
     },
     "Optics": {
         "Beam_Angle": "12\u00b0 to 58\u00b0",
-        "Source": "Incandescent",
-        "Lens": "3 inch Pyrex Glass Fresnel",
-        "Color": false,
-        "Pixel_count": 1
+        "Source": "Tungsten",
+        "Color_Temp": "3200k",
+        "Lens": "3 inch Fresnel",
+        "Color": false
     },
     "Control": {
         "CRMX": false,
@@ -33,7 +32,6 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "5/8 inch spud",
-        "IP_Rating": "Not specified"
+        "mount": "Baby Receiver"
     }
 }
