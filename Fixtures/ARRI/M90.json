@@ -1,0 +1,37 @@
+{
+    "Name": "M90",
+    "Manufacturer": "ARRI",
+    "Image": "https://www.arri.com/resource/blob/40412/4e2b3bb3f9c4a21c23fbdcd2d5b65c2c/M90-Press-Images-01.jpg",
+    "Manual": "https://www.arri.com/resource/blob/113370/4b67a8d6502babb9833e7f7b95f6049c/ARRI-M90-data.pdf",
+    "Dimensions": {
+        "Weight": 87,
+        "Height": 37.3,
+        "Width": 28.1,
+        "Depth": 28.3
+    },
+    "Power": {
+        "AC_voltage": "160V / 123V",
+        "Power_Draw": 9000,
+        "AC_plug": "100a 110v Bates",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "16\u00b0-49\u00b0",
+        "Color_Temp": "6000K",
+        "Source": "HMI",
+        "Color": false,
+        "Lens": "20-inch Open Face ArriMAX Reflector"
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": false,
+        "Ethernet": false,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Junior Pin",
+        "IP_Rating": "IP23"
+    }
+}
