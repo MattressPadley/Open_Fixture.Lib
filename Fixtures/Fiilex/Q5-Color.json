@@ -14,7 +14,7 @@
         "Power_Draw": 175,
         "DC_Port": "XLR-3",
         "DC_voltage": "24-48V DC",
-        "AC_plug": "powerCON TRUE1",
+        "AC_plug": "Edison",
         "USB_Port": true,
         "Internal_battery": false
     },
@@ -24,7 +24,6 @@
         "Source": "LED",
         "LED_Array": "RGBW",
         "Color": true,
-        "Pixel_count": 1,
         "Lens": "5 inch Fresnel"
     },
     "Control": {
@@ -35,7 +34,7 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Combo (baby stud female / junior stud male)",
+        "mount": "Combo Junior pin/Baby receiver",
         "IP_Rating": "IP-X5"
     }
 }
