@@ -1,0 +1,41 @@
+{
+    "Name": "M18",
+    "Manufacturer": "ARRI",
+    "Image": "https://www.arri.com/resource/blob/40406/2e1e43d5647b9f25cbe8e3af08c2e9ab/M18-Press-Images-11.jpg",
+    "Manual": "https://www.arri.com/resource/blob/113368/fd5a7a601f484de79e5e9659dc83dcb4/ARRI-M18-data.pdf",
+    "Dimensions": {
+        "Weight": 22.5,
+        "Height": 21.4,
+        "Width": 15.3,
+        "Depth": 15.5
+    },
+    "Power": {
+        "AC_voltage": "90-125V / 180-250V",
+        "Power_Draw": 1800,
+        "DC_Port": "4-pin XLR",
+        "DC_voltage": "28V",
+        "AC_plug": "Edison",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "15\u00b0-58\u00b0",
+        "Color_Temp": "6000K",
+        "Source": "HMI",
+        "LED_Array": null,
+        "Color": false,
+        "Pixel_count": 1,
+        "Lens": "Open Face"
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": true,
+        "Ethernet": false,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Baby Pin",
+        "IP_Rating": "IP23"
+    }
+}
