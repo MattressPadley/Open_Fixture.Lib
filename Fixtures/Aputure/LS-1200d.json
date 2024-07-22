@@ -1,0 +1,37 @@
+{
+  "Name": "LS 1200d Pro",
+  "Manufacturer": "Aputure",
+  "Image": "https://shop.aputure.com/products/ls-1200d",
+  "Dimensions": {
+    "Width": 9.11
+  },
+  "Power": {
+    "AC_voltage": "100V-240V, 50Hz/60Hz",
+    "Power_Draw": 1440, 
+    "DC_Port": "3-Pin XLR",
+    "DC_voltage": "48V",
+    "AC_plug": "Neutrik powerCON TRUE1 TOP",
+    "USB_Power": false,
+    "Battery_Compatible": true
+  },
+  "Optics": {
+    "Beam_Angle": "15° - 45° with Hyper Reflectors",
+    "Color_Temp": "5600K",
+    "Source": "LED",
+    "LED_Array": "COB",
+    "Color": false,
+    "Pixel_count": 1,
+    "Lens": "Hyper Reflector"
+  },
+  "Control": {
+    "crmx": true,
+    "RDM": true,
+    "Ethernet_Protocols": ["sACN", "Art-Net"],
+    "Ethernet": true,
+    "3_Pin_DMX": false
+  },
+  "Physical": {
+    "mount": "Yoke Mount",
+    "IP_Rating": "IP54"
+  }
+}
