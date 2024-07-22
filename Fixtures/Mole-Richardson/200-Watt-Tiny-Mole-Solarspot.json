@@ -1,0 +1,37 @@
+{
+    "Name": "200 Watt Tiny-Mole Solarspot",
+    "Manufacturer": "Mole-Richardson",
+    "Image": "https://www.mole.com/wp-content/uploads/2020/07/2901-head.jpg",
+    "Manual": "https://www.mole.com/wp-content/uploads/2020/07/2901_specs.pdf",
+    "Dimensions": {
+        "Weight": 3,
+        "Height": 5,
+        "Width": 3.3,
+        "Depth": 5.5
+    },
+    "Power": {
+        "AC_voltage": "120/240",
+        "Power_Draw": 200,
+        "DC_voltage": "120/240",
+        "AC_plug": "Edison",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "22\u00b0 to 57\u00b0",
+        "Source": "Tungsten",
+        "Color_Temp": "3200k",
+        "Lens": "2 inch Fresnel",
+        "Color": false
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": false,
+        "Ethernet": false,
+        "5_Pin_DMX": false,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Baby Receiver"
+    }
+}
