@@ -1,0 +1,40 @@
+{
+    "Name": "Q10 Color",
+    "Manufacturer": "Fiilex",
+    "Image": "https://www.fiilex.com/products/Q10_Color.php",
+    "Manual": "https://www.fiilex.com/downloads/Q10_Color_Manual.pdf",
+    "Dimensions": {
+        "Weight": 44,
+        "Height": 25.1,
+        "Width": 18.1,
+        "Depth": 19.8
+    },
+    "Power": {
+        "AC_voltage": "100-240V AC, 50-60Hz",
+        "Power_Draw": 900,
+        "DC_Port": "powerCON 32A",
+        "DC_voltage": "48V DC",
+        "AC_plug": "Edison",
+        "USB_Port": true,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "11\u00b0-65\u00b0 (78\u00b0 without Fresnel)",
+        "Color_Temp": "2000-10000K",
+        "Source": "LED",
+        "LED_Array": "RGBW",
+        "Color": true,
+        "Lens": "10 inch Fresnel"
+    },
+    "Control": {
+        "CRMX": true,
+        "RDM": true,
+        "Ethernet": true,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Junior Pin",
+        "IP_Rating": "IP-X5"
+    }
+}
