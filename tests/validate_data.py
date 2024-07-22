@@ -68,13 +68,13 @@ def validate_data(data):
 def format_markdown(warnings, filename, schema_error=None):
     output = []
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    output.append(f"### Validation Report - {timestamp}")
+    output.append(f"## Validation Report - {timestamp}")
     if schema_error:
-        output.append(f"## Schema Validation Error in {filename} :x:")
+        output.append(f"###Validation Error in {filename} :x:")
         for schema_error in schema_error:
             output.append(f" - {schema_error}")
     if warnings:
-        output.append(f"## Validation Warnings in {filename} :warning:")
+        output.append(f"### Validation Warnings in {filename} :warning:")
         for warning in warnings:
             output.append(f" - {warning}")
 
