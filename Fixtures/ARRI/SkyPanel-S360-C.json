@@ -1,0 +1,44 @@
+{
+    "Name": "SkyPanel S360-C",
+    "Manufacturer": "ARRI",
+    "Image": "https://www.arri.com/resource/blob/30594/5a9199e1d025bc67154fbbc122d19f63/80-0006925--skypanel-s360-c--data.pdf",
+    "Dimensions": {
+        "Weight": 98,
+        "Height": 48.7,
+        "Width": 62.8,
+        "Depth": 8.0
+    },
+    "Power": {
+        "AC_voltage": "100-240V",
+        "Power_Draw": 1500,
+        "DC_Port": "4-Pin Metal Locking",
+        "DC_voltage": "54V",
+        "AC_plug": "IEC",
+        "USB_Power": false,
+        "Battery_Compatible": false
+    },
+    "Optics": {
+        "Beam_Angle": "105",
+        "Color_Temp": "2800-10000K",
+        "Source": "LED",
+        "LED_Array": "RGBW",
+        "Color": true,
+        "Pixel_count": 1,
+        "Lens": "Swappable Soft Diffusion Panels"
+    },
+    "Control": {
+        "crmx": true,
+        "RDM": true,
+        "Ethernet_Protocols": [
+            "sACN",
+            "Art-Net"
+        ],
+        "Ethernet": true,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "28 mm Spigot (Junior Pin)",
+        "IP_Rating": "IP20"
+    }
+}
