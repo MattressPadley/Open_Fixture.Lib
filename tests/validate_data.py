@@ -111,8 +111,6 @@ def main(file, schema_file, output_file):
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
 
     with open(output_file, "a") as f:
-        f.write("## Validation Report\n\n")
-        f.write(f"Generated at: {timestamp}\n\n")
         f.write(markdown_output + "\n\n")
 
     if schema_errors:
