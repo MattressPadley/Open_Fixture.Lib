@@ -67,10 +67,7 @@ def validate_data(data):
 
 def format_markdown(warnings, filename, schema_error=None):
     output = []
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    output.append(f"# Validation Report")
     output.append(f"## {filename}")
-    output.append(f" {timestamp}")
     if schema_error:
         output.append(f"### :x: Validation Errors :x:")
         for schema_error in schema_error:
@@ -81,7 +78,9 @@ def format_markdown(warnings, filename, schema_error=None):
             output.append(f" - {warning}")
 
     if not warnings and not schema_error:
-        output.append(f"### All validations passed :white_check_mark:")
+        output.append(
+            f"### :white_check_mark: All validations passed :white_check_mark:"
+        )
 
     return "\n".join(output)
 
@@ -109,7 +108,11 @@ def main(file, schema_file, output_file):
         warnings, file, schema_error_messages if not is_valid else None
     )
 
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+
     with open(output_file, "a") as f:
+        f.write("## Validation Report\n\n")
+        f.write(f"Generated at: {timestamp}\n\n")
         f.write(markdown_output + "\n\n")
 
     if schema_errors:
