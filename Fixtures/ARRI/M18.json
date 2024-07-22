@@ -1,0 +1,39 @@
+{
+    "Name": "M18",
+    "Manufacturer": "ARRI",
+    "Image": "https://www.arri.com/resource/blob/40406/2e1e43d5647b9f25cbe8e3af08c2e9ab/M18-Press-Images-11.jpg",
+    "Manual": "https://www.arri.com/resource/blob/113368/fd5a7a601f484de79e5e9659dc83dcb4/ARRI-M18-data.pdf",
+    "Dimensions": {
+        "Weight": 23.3,
+        "Height": 25.9,
+        "Width": 15.3,
+        "Depth": 15.5
+    },
+    "Power": {
+        "AC_voltage": "100-140v",
+        "Power_Draw": 1800,
+        "AC_plug": "Edison",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "20\u00b0-60\u00b0",
+        "Color_Temp": "6000K",
+        "Source": "HMI",
+        "LED_Array": null,
+        "Color": false,
+        "Pixel_count": 1,
+        "Lens": "11-inch Open Face ArriMAX Reflector"
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": false,
+        "Ethernet": false,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Baby Pin",
+        "IP_Rating": "IP23"
+    }
+}
