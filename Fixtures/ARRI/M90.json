@@ -1,0 +1,41 @@
+{
+    "Name": "M90",
+    "Manufacturer": "ARRI",
+    "Image": "https://www.arri.com/resource/blob/40412/4e2b3bb3f9c4a21c23fbdcd2d5b65c2c/M90-Press-Images-01.jpg",
+    "Manual": "https://www.arri.com/resource/blob/113370/4b67a8d6502babb9833e7f7b95f6049c/ARRI-M90-data.pdf",
+    "Dimensions": {
+        "Weight": 88,
+        "Height": 28.6,
+        "Width": 24.2,
+        "Depth": 29.8
+    },
+    "Power": {
+        "AC_voltage": "100-250V",
+        "Power_Draw": 9000,
+        "DC_Port": null,
+        "DC_voltage": null,
+        "AC_plug": "100a 110v Bates",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "15\u00b0-49\u00b0",
+        "Color_Temp": "6000K",
+        "Source": "HMI",
+        "LED_Array": null,
+        "Color": false,
+        "Pixel_count": 1,
+        "Lens": "Open Face"
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": true,
+        "Ethernet": false,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Junior Pin",
+        "IP_Rating": "IP23"
+    }
+}
