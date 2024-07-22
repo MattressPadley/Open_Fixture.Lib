@@ -16,7 +16,7 @@
         "DC_voltage": "48V",
         "AC_plug": "Edison",
         "USB_Port": true,
-        "internal_battery": false
+        "Internal_battery": false
     },
     "Optics": {
         "Beam_Angle": "20\u00b0",
