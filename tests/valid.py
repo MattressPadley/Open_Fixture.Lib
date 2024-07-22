@@ -1,6 +1,5 @@
 import json
 import sys
-import logging
 
 REQUIRED_BOOLEAN_FIELDS = [
     "Power.USB_Power",
@@ -44,10 +43,6 @@ ALL_FIELDS = [
     "Physical.IP_Rating",
 ]
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
-
 
 def get_nested_field(data, field_path):
     keys = field_path.split(".")
@@ -78,31 +73,40 @@ def validate_data(data):
     return errors, warnings
 
 
+def main(file):
+    try:
+        with open(file) as f:
+            data = json.load(f)
+    except Exception as e:
+        return f"Error reading JSON file {file}: {e}"
+
+    errors, warnings = validate_data(data)
+    output = []
+
+    if errors:
+        output.append(f"Validation Errors in {file}:")
+        for error in errors:
+            output.append(f" - {error}")
+    if warnings:
+        output.append(f"Validation Warnings in {file}:")
+        for warning in warnings:
+            output.append(f" - {warning}")
+
+    if not errors and not warnings:
+        output.append(f"All validations passed for {file}!")
+
+    return "\n".join(output)
+
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python validate_data.py <data_file.json>")
         sys.exit(1)
 
-    data_file = sys.argv[1]
-    try:
-        with open(data_file) as f:
-            data = json.load(f)
-    except Exception as e:
-        logging.error(f"Error reading JSON file: {e}")
+    file = sys.argv[1]
+    result = main(file)
+    print(result)
+    if "Validation Errors" in result:
         sys.exit(1)
-
-    validation_errors, validation_warnings = validate_data(data)
-
-    if validation_errors:
-        logging.error("Validation Errors Found:")
-        for error in validation_errors:
-            logging.error(f" - {error}")
-        sys.exit(1)
-
-    if validation_warnings:
-        logging.warning("Validation Warnings Found:")
-        for warning in validation_warnings:
-            logging.warning(f" - {warning}")
-
-    logging.info("All validations passed!")
-    sys.exit(0)
+    else:
+        sys.exit(0)
