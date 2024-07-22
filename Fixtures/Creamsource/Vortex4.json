@@ -23,7 +23,7 @@
         "Source": "LED",
         "LED_Array": "RRGBBW",
         "Color": true,
-        "Pixel_count": 1,
+        "Pixel_count": 4,
         "Lens": "20\u00b0 Native, 110\u00b0 With Diffusion"
     },
     "Control": {
