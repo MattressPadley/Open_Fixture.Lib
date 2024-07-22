@@ -1,0 +1,41 @@
+{
+    "Name": "Q8 Color",
+    "Manufacturer": "Fiilex",
+    "Image": "https://www.fiilex.com/products/Q8_Color.php",
+    "Manual": "https://www.fiilex.com/downloads/Q8_Color_Manual.pdf",
+    "Dimensions": {
+        "Weight": 17,
+        "Height": 19.6,
+        "Width": 12.7,
+        "Depth": 13.6
+    },
+    "Power": {
+        "AC_voltage": "100-240V AC, 50-60Hz",
+        "Power_Draw": 320,
+        "DC_Port": "XLR-3",
+        "DC_voltage": "24-48V DC",
+        "AC_plug": "powerCON TRUE1",
+        "USB_Port": true,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "12\u00b0-62\u00b0",
+        "Color_Temp": "2000-10000K",
+        "Source": "LED",
+        "LED_Array": "RGBW",
+        "Color": true,
+        "Pixel_count": 1,
+        "Lens": "8 inch Fresnel"
+    },
+    "Control": {
+        "CRMX": true,
+        "RDM": true,
+        "Ethernet": true,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Combo (baby stud female / junior stud male)",
+        "IP_Rating": "IP-X5"
+    }
+}
