@@ -10,7 +10,7 @@
         "Depth": 12.2
     },
     "Power": {
-        "AC_voltage": "90-125V / 180-250V",
+        "AC_voltage": "90-130V / 180-250V",
         "Power_Draw": 800,
         "AC_plug": "Edison",
         "USB_Port": false,
