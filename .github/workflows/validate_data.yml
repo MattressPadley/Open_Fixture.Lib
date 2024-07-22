@@ -46,8 +46,7 @@ jobs:
             validation_output=$(python tests/valid.py "$file" 2>&1) || all_passed=false
             output+="$file:\n$validation_output\n\n"
           done
-          echo "$output"
-          echo "::set-output name=validation_output::$output"
+          echo "$output" > validation_output.txt
           if [ "$all_passed" = false ]; then
             exit 1
           fi
@@ -57,4 +56,4 @@ jobs:
         if: steps.filter.outputs.json == 'true'
         uses: mshick/add-pr-comment@v2
         with:
-          message: validation_output
+          message-path: validation_output.txt
