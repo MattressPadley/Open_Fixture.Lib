@@ -1,0 +1,40 @@
+{
+    "Name": "Vortex24",
+    "Manufacturer": "Creamsource",
+    "Image": "https://creamsource.com/wp-content/uploads/2024/02/vortex24_spec_spin_576p.mp4",
+    "Manual": "https://knowledge.creamsource.com",
+    "Dimensions": {
+        "Weight": 117.9,
+        "Height": 38.2,
+        "Width": 52.5,
+        "Depth": 10.2
+    },
+    "Power": {
+        "AC_voltage": "100-240V",
+        "Power_Draw": 1950,
+        "DC_Port": "3-Pin XLR",
+        "DC_voltage": "48V",
+        "AC_plug": "Edison",
+        "USB_Port": true
+    },
+    "Optics": {
+        "Beam_Angle": "20\u00b0",
+        "Color_Temp": "2200K-15000K",
+        "Source": "LED",
+        "LED_Array": "RRGBBW",
+        "Color": true,
+        "Pixel_count": 24,
+        "Lens": "20\u00b0 Native"
+    },
+    "Control": {
+        "CRMX": true,
+        "RDM": true,
+        "Ethernet": true,
+        "5_Pin_DMX": true,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Junior Pin",
+        "IP_Rating": "IP65"
+    }
+}
