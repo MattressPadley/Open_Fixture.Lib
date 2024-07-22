@@ -2,9 +2,8 @@ import json
 import sys
 
 REQUIRED_BOOLEAN_FIELDS = [
-    "Power.USB_Power",
-    "Power.Battery_Compatible",
-    "Control.crmx",
+    "Power.USB_Port",
+    "Control.CRMX",
     "Control.RDM",
     "Control.Ethernet",
     "Control.5_Pin_DMX",
@@ -24,8 +23,6 @@ ALL_FIELDS = [
     "Power.DC_Port",
     "Power.DC_voltage",
     "Power.AC_plug",
-    "Power.USB_Power",
-    "Power.Battery_Compatible",
     "Optics.Beam_Angle",
     "Optics.Color_Temp",
     "Optics.Source",
@@ -33,12 +30,6 @@ ALL_FIELDS = [
     "Optics.Color",
     "Optics.Pixel_count",
     "Optics.Lens",
-    "Control.crmx",
-    "Control.RDM",
-    "Control.Ethernet_Protocols",
-    "Control.Ethernet",
-    "Control.5_Pin_DMX",
-    "Control.3_Pin_DMX",
     "Physical.mount",
     "Physical.IP_Rating",
 ]
@@ -84,7 +75,7 @@ def main(file):
     output = []
 
     if errors:
-        output.append(f"Validation Errors in {file}:")
+        output.append(f"Validation Errors in {file}:]")
         for error in errors:
             output.append(f" - {error}")
     if warnings:
@@ -95,7 +86,7 @@ def main(file):
     if not errors and not warnings:
         output.append(f"All validations passed for {file}!")
 
-    return "\n".join(output)
+    return " ".join(output)
 
 
 if __name__ == "__main__":
