@@ -19,8 +19,8 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: pip install jsonschema jq
+      - name: Install jq (if needed)
+        run: sudo apt-get install jq
 
       - name: Filter changed JSON files
         id: filter
@@ -40,13 +40,12 @@ jobs:
         id: validate
         run: |
           json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
+          output_file="validation_output.md"
+          > $output_file
           all_passed=true
-          output=""
           for file in $json_files; do
-            validation_output=$(python tests/valid.py "$file" 2>&1) || all_passed=false
-            output+="$file:\n$validation_output\n\n"
+            python tests/validate_data.py "$file" "$output_file" || all_passed=false
           done
-          echo "$output" > validation_output.txt
           echo "all_passed=$all_passed" >> $GITHUB_ENV
         shell: bash
 
@@ -54,7 +53,7 @@ jobs:
         if: steps.filter.outputs.json == 'true'
         uses: mshick/add-pr-comment@v2
         with:
-          message-path: validation_output.txt
+          message-path: validation_output.md
 
       - name: Fail job if validation failed
         if: steps.filter.outputs.json == 'true' && env.all_passed == 'false'

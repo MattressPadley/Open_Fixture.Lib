@@ -9,7 +9,6 @@ REQUIRED_BOOLEAN_FIELDS = [
     "Control.Ethernet",
     "Control.5_Pin_DMX",
     "Control.3_Pin_DMX",
-    
 ]
 
 ALL_FIELDS = [
@@ -66,7 +65,24 @@ def validate_data(data):
     return errors, warnings
 
 
-def main(file):
+def format_markdown(errors, warnings, filename):
+    output = []
+    if errors:
+        output.append(f"### Validation Errors in {filename} :x:")
+        for error in errors:
+            output.append(f" - **{error}**")
+    if warnings:
+        output.append(f"### Validation Warnings in {filename} :warning:")
+        for warning in warnings:
+            output.append(f" - *{warning}*")
+
+    if not errors and not warnings:
+        output.append(f"### All validations passed for {filename} :white_check_mark:")
+
+    return "\n".join(output)
+
+
+def main(file, output_file):
     try:
         with open(file) as f:
             data = json.load(f)
@@ -74,32 +90,23 @@ def main(file):
         return f"Error reading JSON file {file}: {e}"
 
     errors, warnings = validate_data(data)
-    output = []
+    markdown_output = format_markdown(errors, warnings, file)
+
+    with open(output_file, "a") as f:
+        f.write(markdown_output + "\n\n")
 
     if errors:
-        output.append(f"Validation Errors in {file}:]")
-        for error in errors:
-            output.append(f" - {error}")
-    if warnings:
-        output.append(f"Validation Warnings in {file}:")
-        for warning in warnings:
-            output.append(f" - {warning}")
-
-    if not errors and not warnings:
-        output.append(f"All validations passed for {file}!")
-
-    return " ".join(output)
+        return 1
+    else:
+        return 0
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python validate_data.py <data_file.json>")
+    if len(sys.argv) != 3:
+        print("Usage: python validate_data.py <data_file.json> <output_file.md>")
         sys.exit(1)
 
     file = sys.argv[1]
-    result = main(file)
-    print(result)
-    if "Validation Errors" in result:
-        sys.exit(1)
-    else:
-        sys.exit(0)
+    output_file = sys.argv[2]
+    result = main(file, output_file)
+    sys.exit(result)
