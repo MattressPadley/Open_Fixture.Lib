@@ -61,3 +61,15 @@ jobs:
         uses: mshick/add-pr-comment@v2
         with:
           message-path: update_output.md
+
+      - name: Create branch and commit changes
+        if: 
+        run: |
+          git config --global user.name "Database Update Bot"
+          git config --global user.email "youremail@example.com"
+          git checkout -b new-ids
+          for file in new-ids.txt; do
+            git add $file
+          done
+          git commit -m "Update Fixtures database"
+          git push origin new-ids
