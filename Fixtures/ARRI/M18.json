@@ -21,7 +21,6 @@
         "Color_Temp": "6000K",
         "Source": "HMI",
         "Color": false,
-        "Pixel_count": 1,
         "Lens": "11-inch Open Face ArriMAX Reflector"
     },
     "Control": {
