@@ -19,6 +19,7 @@
     "Optics": {
         "Beam_Angle": "27\u00b0 to 55\u00b0",
         "Source": "Tungsten",
+        "Color_Temp": "3200k",
         "Lens": "6 inch Fresnel",
         "Color": false
     },
