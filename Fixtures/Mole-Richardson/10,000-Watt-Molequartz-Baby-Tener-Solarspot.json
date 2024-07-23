@@ -19,7 +19,8 @@
     },
     "Optics": {
         "Beam_Angle": "15\u00b0 to 63\u00b0",
-        "Source": "Quartz",
+        "Source": "Tungsten",
+        "Color_Temp": "3200k",
         "Lens": "14 inch Fresnel",
         "Color": false
     },
@@ -31,7 +32,6 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Junior Pin",
-        "IP_Rating": "None"
+        "mount": "Junior Pin"
     }
 }
