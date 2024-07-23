@@ -20,6 +20,7 @@
     "Optics": {
         "Beam_Angle": "21\u00b0 to 70\u00b0",
         "Source": "Quartz",
+        "Color_Temp": "3200k",
         "Lens": "4 15/32 inch Fresnel",
         "Color": false
     },
