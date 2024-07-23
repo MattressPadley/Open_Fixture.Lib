@@ -11,7 +11,6 @@
     "Power": {
         "AC_voltage": "120/240",
         "Power_Draw": 2000,
-        "DC_Port": "None",
         "DC_voltage": "120/240",
         "AC_plug": "Edison",
         "USB_Port": false,
@@ -19,7 +18,7 @@
     },
     "Optics": {
         "Beam_Angle": "27\u00b0 to 55\u00b0",
-        "Source": "Quartz",
+        "Source": "Tungsten",
         "Lens": "6 inch Fresnel",
         "Color": false
     },
@@ -31,7 +30,6 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Junior Pin",
-        "IP_Rating": "None"
+        "mount": "Junior Pin"
     }
 }
