@@ -3,9 +3,13 @@ import sys
 import json
 from pymongo import MongoClient
 from bson import ObjectId
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
+# Create a file called update_output.md
+with open('update_output.md', 'w') as file:
+    # Redirect standard output to the file
+    sys.stdout = file
 
 # Connect to the MongoDB database
 client = MongoClient(os.getenv("MONGO_URI"))
@@ -38,7 +42,7 @@ def add_id(path, id):
     data['_id'] = str(id)
     with open(path, 'w') as file:
         json.dump(data, file, indent=4)
-                  
+
 def get_data(path):
     with open(path) as file:
         json_data = json.load(file)
@@ -54,4 +58,6 @@ if __name__ == "__main__":
 
     data = get_data(path)
     update_entry(data, data_type)
-    
+
+    # Restore standard output
+    sys.stdout = sys.__stdout__
