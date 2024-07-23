@@ -1,0 +1,37 @@
+{
+    "Name": "10,000 Watt Molequartz Baby Tener Solarspot",
+    "Manufacturer": "Mole-Richardson",
+    "Image": "https://www.mole.com/images/4181-1%20Head.jpg",
+    "Dimensions": {
+        "Weight": 52.5,
+        "Height": 22.5,
+        "Width": 19,
+        "Depth": 22.5
+    },
+    "Power": {
+        "AC_voltage": "120/240",
+        "Power_Draw": 10000,
+        "DC_Port": "None",
+        "DC_voltage": "120/240",
+        "AC_plug": "100 Amp 110v Bates",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "15\u00b0 to 63\u00b0",
+        "Source": "Tungsten",
+        "Color_Temp": "3200k",
+        "Lens": "14 inch Fresnel",
+        "Color": false
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": false,
+        "Ethernet": false,
+        "5_Pin_DMX": false,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Junior Pin"
+    }
+}
