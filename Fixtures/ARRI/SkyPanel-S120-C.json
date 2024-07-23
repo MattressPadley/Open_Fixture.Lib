@@ -14,7 +14,6 @@
         "Power_Draw": 400,
         "DC_Port": "XLR 4-pin",
         "DC_voltage": "48V",
-        "AC_plug": "Edison",
         "USB_Port": true,
         "Internal_battery": false
     },
