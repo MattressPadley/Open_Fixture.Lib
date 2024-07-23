@@ -28,7 +28,7 @@ def update_entry(data, data_type):
         collection.update_one({"_id": entry["_id"]}, {"$set": data})
 
         return f"Entry for {name} updated successfully."
-    
+
     else:
         # Create a new entry with the provided data
         collection.insert_one(data)
@@ -47,6 +47,7 @@ def add_id(path, id):
     with open("new_ids.txt", "a") as f:
         f.write(f"{path}")
 
+
 def get_data(path):
     with open(path) as file:
         json_data = json.load(file)
@@ -60,7 +61,6 @@ if __name__ == "__main__":
 
     path = sys.argv[1]
     data_type = sys.argv[2]
-
 
     data = get_data(path)
     response = update_entry(data, data_type)
