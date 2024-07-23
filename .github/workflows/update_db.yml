@@ -18,7 +18,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -63,12 +63,12 @@ jobs:
           message-path: update_output.md
 
       - name: Create branch and commit changes
-        if: 
+        uses: actions/checkout@v4
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b new-ids
           git add Fixtures/**/*.json
-          git commit -m "Changes from database update, Probable new IDs"
+          git commit -m "Changes from database update, Probably new IDs"
           git push origin new-ids
         shell: bash
