@@ -62,5 +62,4 @@ jobs:
           commit-message: "Changes from database update, Probably new IDs \n\n[skip actions]"
           add-paths: Fixtures/**/*.json
           title: "Add new IDs to Fixtures"
-          delete-branch: true
           branch: new-ids
