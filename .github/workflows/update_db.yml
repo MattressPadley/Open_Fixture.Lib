@@ -3,7 +3,7 @@ name: Update Fixtures Database
 on:
   pull_request:
     branches:
-      - database-update
+      - main
     paths:
       - 'Fixtures/**/*.json'
     types:
@@ -52,7 +52,7 @@ jobs:
         run: |
           json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
           for file in $json_files; do
-            python tests/update_db.py "$file" Fixtures-test
+            python tests/update_db.py "$file" Fixtures
           done
         shell: bash
 
