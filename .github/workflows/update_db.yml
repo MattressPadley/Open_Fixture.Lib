@@ -68,4 +68,4 @@ jobs:
           git checkout -b new-ids
           git add Fixtures/**/*.json
           git commit -m "Changes from database update, Probably new IDs"
-          git push
+          git push origin new-ids
