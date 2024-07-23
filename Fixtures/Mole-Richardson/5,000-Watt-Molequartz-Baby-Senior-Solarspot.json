@@ -3,15 +3,14 @@
     "Manufacturer": "Mole-Richardson",
     "Image": "https://www.mole.com/images/4191_large.jpg",
     "Dimensions": {
-        "Weight": 33.75,
+        "Weight": 33.7,
         "Height": 16,
         "Width": 14,
-        "Depth": 17.25
+        "Depth": 17.2
     },
     "Power": {
         "AC_voltage": "120/240",
         "Power_Draw": 5000,
-        "DC_Port": "None",
         "DC_voltage": "120/240",
         "AC_plug": "60 Amp 110v Bates",
         "USB_Port": false,
@@ -20,7 +19,8 @@
     "Optics": {
         "Beam_Angle": "17\u00b0 to 61\u00b0",
         "Source": "Quartz",
-        "Lens": "9 7/8 inch Fresnel",
+        "Color_Temp": "3200k",
+        "Lens": "10 inch Fresnel",
         "Color": false
     },
     "Control": {
@@ -31,7 +31,6 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Junior Pin",
-        "IP_Rating": "None"
+        "mount": "Junior Pin"
     }
 }
