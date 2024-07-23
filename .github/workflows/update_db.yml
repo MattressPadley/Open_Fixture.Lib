@@ -65,12 +65,10 @@ jobs:
       - name: Create branch and commit changes
         if: 
         run: |
-          git config --global user.name "Database Update Bot"
-          git config --global user.email "youremail@example.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b new-ids
-          for file in new-ids.txt; do
-            git add $file
-          done
-          git commit -m "Update Fixtures database"
+          git add Fixtures/**/*.json
+          git commit -m "Changes from database update, Probable new IDs"
           git push origin new-ids
         shell: bash
