@@ -62,8 +62,8 @@ if __name__ == "__main__":
     data_type = sys.argv[2]
 
 
-    # data = get_data(path)
-    # update_entry(data, data_type)
+    data = get_data(path)
+    update_entry(data, data_type)
 
-    # # Restore standard output
-    # sys.stdout = sys.__stdout__
+    # Restore standard output
+    sys.stdout = sys.__stdout__
