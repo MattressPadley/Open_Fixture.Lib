@@ -1,9 +1,14 @@
 name: Update Fixtures Database
 
 on:
-  push:
+  pull_request:
     branches:
-      - database-update
+      - main
+    paths:
+      - 'Fixtures/**/*.json'
+    types:
+      - closed
+
 
 jobs:
   updateDB:
@@ -11,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+      contents: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -42,15 +47,20 @@ jobs:
       - name: Update Fixtures Database
         if: steps.filter.outputs.json != ''
         id: update
+        env:
+          MONGO_URI: ${{ secrets.MONGO_URI }}
         run: |
           json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
           for file in $json_files; do
-            python tests/update_db.py "$file" Fixtures-test
+            python tests/update_db.py "$file" Fixtures
           done
         shell: bash
 
-      - name: Comment on PR with update results
-        if: steps.filter.outputs.json != ''
-        uses: mshick/add-pr-comment@v2
+      - name: Create PR with new IDs
+        uses: peter-evans/create-pull-request@v3
         with:
-          message-path: update_output.md
+          commit-message: "Changes from database update, Probably new IDs \n\n[skip actions]"
+          add-path: 'Fixtures/**/*.json'
+          title: "Add new IDs to Fixtures"
+          delete-branch: true
+          branch: new-ids
