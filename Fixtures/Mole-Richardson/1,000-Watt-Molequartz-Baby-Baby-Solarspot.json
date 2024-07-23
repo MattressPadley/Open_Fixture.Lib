@@ -1,0 +1,36 @@
+{
+    "Name": "1,000 Watt Molequartz Baby-Baby Solarspot",
+    "Manufacturer": "Mole-Richardson",
+    "Image": "https://www.mole.com/images/2831_new_large.jpg",
+    "Dimensions": {
+        "Weight": 9.5,
+        "Height": 9.2,
+        "Width": 7.3,
+        "Depth": 8.8
+    },
+    "Power": {
+        "AC_voltage": "120/240",
+        "Power_Draw": 1000,
+        "DC_voltage": "120/240",
+        "AC_plug": "Edison",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "21\u00b0 to 70\u00b0",
+        "Source": "Quartz",
+        "Color_Temp": "3200k",
+        "Lens": "4 inch Fresnel",
+        "Color": false
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": false,
+        "Ethernet": false,
+        "5_Pin_DMX": false,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Baby Pin"
+    }
+}

@@ -45,7 +45,6 @@ def add_id(path, id):
     with open(path, "w") as file:
         json.dump(data, file, indent=4)
 
-
 def get_data(path):
     with open(path) as file:
         json_data = json.load(file)
