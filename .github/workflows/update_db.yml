@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - database-update
+    paths:
+      - 'Fixtures/**/*.json'
 
 jobs:
   updateDB:
