@@ -61,8 +61,10 @@ if __name__ == "__main__":
     path = sys.argv[1]
     data_type = sys.argv[2]
 
-    data = get_data(path)
-    update_entry(data, data_type)
+    print(f"Updating database with data from {path}...")
 
-    # Restore standard output
-    sys.stdout = sys.__stdout__
+    # data = get_data(path)
+    # update_entry(data, data_type)
+
+    # # Restore standard output
+    # sys.stdout = sys.__stdout__

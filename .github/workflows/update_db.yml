@@ -41,6 +41,8 @@ jobs:
       - name: Update Fixtures Database
         if: steps.filter.outputs.json != ''
         id: update
+        env:
+          MONGO_URI: ${{ secrets.MONGO_URI }}
         run: |
           json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
           for file in $json_files; do
