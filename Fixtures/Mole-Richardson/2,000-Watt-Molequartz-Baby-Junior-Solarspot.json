@@ -1,0 +1,36 @@
+{
+    "Name": "2,000 Watt Molequartz Baby Junior Solarspot",
+    "Manufacturer": "Mole-Richardson",
+    "Image": "https://www.mole.com/images/4131_large.jpg",
+    "Dimensions": {
+        "Weight": 16.5,
+        "Height": 11.75,
+        "Width": 9.75,
+        "Depth": 13.25
+    },
+    "Power": {
+        "AC_voltage": "120/240",
+        "Power_Draw": 2000,
+        "DC_voltage": "120/240",
+        "AC_plug": "Edison",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "27\u00b0 to 55\u00b0",
+        "Source": "Tungsten",
+        "Color_Temp": "3200k",
+        "Lens": "6 inch Fresnel",
+        "Color": false
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": false,
+        "Ethernet": false,
+        "5_Pin_DMX": false,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Junior Pin"
+    }
+}
