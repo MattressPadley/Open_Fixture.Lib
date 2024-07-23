@@ -12,6 +12,7 @@
     "Power": {
         "Power_Draw": 800,
         "AC_plug": "Edison2",
+        "AC_voltage": "90-250V",
         "USB_Port": false,
         "Internal_battery": false
     },
