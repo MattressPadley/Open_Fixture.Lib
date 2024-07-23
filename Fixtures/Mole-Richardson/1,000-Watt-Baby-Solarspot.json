@@ -19,7 +19,8 @@
     },
     "Optics": {
         "Beam_Angle": "15\u00b0 to 58\u00b0",
-        "Source": "Incandescent",
+        "Source": "Tungsten",
+        "Color_Temp": "3200k",
         "Lens": "6 inch Fresnel",
         "Color": false
     },
