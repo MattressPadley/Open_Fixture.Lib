@@ -1,10 +1,9 @@
 name: Update Fixtures Database
 
 on:
-  branch:
-    - database
-  pull_request:
-    types: [closed]
+  push:
+    branches:
+      - database-update
 
 jobs:
   updateDB:
