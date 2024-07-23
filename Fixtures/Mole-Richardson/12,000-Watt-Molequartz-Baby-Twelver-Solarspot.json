@@ -1,0 +1,36 @@
+{
+    "Name": "12,000 Watt Molequartz Baby Twelver Solarspot",
+    "Manufacturer": "Mole-Richardson",
+    "Image": "https://www.mole.com/images/4171%20head.jpg",
+    "Dimensions": {
+        "Weight": 60.2,
+        "Height": 39.6,
+        "Width": 24.7,
+        "Depth": 25.1
+    },
+    "Power": {
+        "AC_voltage": "120/240",
+        "Power_Draw": 12000,
+        "DC_voltage": "120/240",
+        "AC_plug": "100 Amp 110v Bates",
+        "USB_Port": false,
+        "Internal_battery": false
+    },
+    "Optics": {
+        "Beam_Angle": "15\u00b0 to 60\u00b0",
+        "Source": "Tungsten",
+        "Color_Temp": "3200k",
+        "Lens": "17.5 inch Fresnel",
+        "Color": false
+    },
+    "Control": {
+        "CRMX": false,
+        "RDM": false,
+        "Ethernet": false,
+        "5_Pin_DMX": false,
+        "3_Pin_DMX": false
+    },
+    "Physical": {
+        "mount": "Junior Pin"
+    }
+}
