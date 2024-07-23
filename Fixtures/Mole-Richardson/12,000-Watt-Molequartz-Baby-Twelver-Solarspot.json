@@ -3,15 +3,14 @@
     "Manufacturer": "Mole-Richardson",
     "Image": "https://www.mole.com/images/4171%20head.jpg",
     "Dimensions": {
-        "Weight": 60.25,
-        "Height": 39.625,
-        "Width": 24.75,
-        "Depth": 25.125
+        "Weight": 60.2,
+        "Height": 39.6,
+        "Width": 24.7,
+        "Depth": 25.1
     },
     "Power": {
         "AC_voltage": "120/240",
         "Power_Draw": 12000,
-        "DC_Port": "None",
         "DC_voltage": "120/240",
         "AC_plug": "100 Amp 110v Bates",
         "USB_Port": false,
@@ -19,7 +18,8 @@
     },
     "Optics": {
         "Beam_Angle": "15\u00b0 to 60\u00b0",
-        "Source": "Quartz",
+        "Source": "Tungsten",
+        "Color_Temp": "3200k",
         "Lens": "17.5 inch Fresnel",
         "Color": false
     },
@@ -31,7 +31,6 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Junior Pin",
-        "IP_Rating": "None"
+        "mount": "Junior Pin"
     }
 }
