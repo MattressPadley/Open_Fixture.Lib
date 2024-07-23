@@ -1,0 +1,66 @@
+name: Update Fixtures Database
+
+on:
+  pull_request:
+    branches:
+      - database-update
+    paths:
+      - 'Fixtures/**/*.json'
+    types:
+      - closed
+
+
+jobs:
+  updateDB:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      - name: Install Pymongo
+        run: pip install pymongo
+
+      - name: Install jq
+        run: sudo apt-get install jq
+
+      - name: Filter merged JSON files
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            json:
+              - 'Fixtures/**/*.json'
+          list-files: "json"
+
+      - name: Debug JSON files output
+        if: steps.filter.outputs.json != ''
+        run: echo '${{ steps.filter.outputs.json_files }}'
+
+      - name: Update Fixtures Database
+        if: steps.filter.outputs.json != ''
+        id: update
+        env:
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+        run: |
+          json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
+          for file in $json_files; do
+            python tests/update_db.py "$file" Fixtures-test
+          done
+        shell: bash
+
+      - name: Create PR with new IDs
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: "Changes from database update, Probably new IDs \n\n[skip actions]"
+          add-path: 'Fixtures/**/*.json'
+          title: "Add new IDs to Fixtures"
+          delete-branch: true
+          branch: new-ids
