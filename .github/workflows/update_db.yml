@@ -47,7 +47,7 @@ jobs:
         run: |
           json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
           for file in $json_files; do
-            python tests/update_db.py "$file" Fixtures
+            python tests/update_db.py "$file" Fixtures-test
           done
         shell: bash
 
