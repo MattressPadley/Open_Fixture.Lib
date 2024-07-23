@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -64,6 +65,7 @@ jobs:
       - run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b new-ids
           git add Fixtures/**/*.json
           git commit -m "Changes from database update, Probably new IDs"
-          git push 
+          git push origin new-ids
