@@ -1,13 +1,12 @@
 {
-    "Name": "1,000 Watt Baby Solarspot",
+    "Name": "1,000 Watt Molequartz Baby-Baby Solarspot",
     "Manufacturer": "Mole-Richardson",
-    "Image": "https://www.mole.com/wp-content/uploads/2020/07/407-Head.jpg",
-    "Manual": "https://www.mole.com/wp-content/uploads/2020/07/407_specs.pdf",
+    "Image": "https://www.mole.com/images/2831_new_large.jpg",
     "Dimensions": {
-        "Weight": 13.7,
-        "Height": 11.2,
-        "Width": 8.6,
-        "Depth": 10.5
+        "Weight": 9.5,
+        "Height": 9.2,
+        "Width": 7.3,
+        "Depth": 8.8
     },
     "Power": {
         "AC_voltage": "120/240",
@@ -18,10 +17,10 @@
         "Internal_battery": false
     },
     "Optics": {
-        "Beam_Angle": "15\u00b0 to 58\u00b0",
-        "Source": "Tungsten",
+        "Beam_Angle": "21\u00b0 to 70\u00b0",
+        "Source": "Quartz",
         "Color_Temp": "3200k",
-        "Lens": "6 inch Fresnel",
+        "Lens": "4 inch Fresnel",
         "Color": false
     },
     "Control": {
@@ -32,7 +31,7 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Baby Receiver"
+        "mount": "Baby Pin"
     },
-    "_id": "669f4febecf52d98df6fde7c"
+    "_id": "66a0104451ed274060c60fb4"
 }
