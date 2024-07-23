@@ -7,10 +7,7 @@ from bson import ObjectId
 # from dotenv import load_dotenv
 
 # load_dotenv()
-# Create a file called update_output.md
-with open("update_output.md", "w") as file:
-    # Redirect standard output to the file
-    sys.stdout = file
+
 
 # Connect to the MongoDB database
 client = MongoClient(os.getenv("MONGO_URI"))
@@ -29,14 +26,16 @@ def update_entry(data, data_type):
         data["_id"] = ObjectId(data["_id"])
         # Update the entry with the new data
         collection.update_one({"_id": entry["_id"]}, {"$set": data})
-        print(f"Entry for {name} updated successfully.")
+
+        return f"Entry for {name} updated successfully."
+    
     else:
         # Create a new entry with the provided data
         collection.insert_one(data)
-        print(f"New entry for {name} created successfully.")
         new_entry_id = collection.find_one({"Name": name})["_id"]
-        print(f"ID of the new entry: {new_entry_id}")
         add_id(path, new_entry_id)
+
+        return f"Entry for {name} created successfully."
 
 
 def add_id(path, id):
@@ -63,7 +62,7 @@ if __name__ == "__main__":
 
 
     data = get_data(path)
-    update_entry(data, data_type)
+    response = update_entry(data, data_type)
 
-    # Restore standard output
-    sys.stdout = sys.__stdout__
+    with open("update_output.md", "a") as f:
+        f.write(f"{response}\n")
