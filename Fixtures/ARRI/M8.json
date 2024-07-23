@@ -25,7 +25,7 @@
     },
     "Control": {
         "CRMX": false,
-        "RDM":false,
+        "RDM": false,
         "Ethernet": false,
         "5_Pin_DMX": true,
         "3_Pin_DMX": false
@@ -33,5 +33,6 @@
     "Physical": {
         "mount": "Baby Pin",
         "IP_Rating": "IP23"
-    }
+    },
+    "_id": "669f4fe6a7118a3d9274cdb3"
 }
