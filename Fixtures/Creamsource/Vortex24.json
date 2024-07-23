@@ -17,7 +17,6 @@
         "AC_plug": "Edison",
         "USB_Port": true,
         "Internal_battery": false
-
     },
     "Optics": {
         "Beam_Angle": "20\u00b0",
@@ -38,5 +37,6 @@
     "Physical": {
         "mount": "Junior Pin",
         "IP_Rating": "IP65"
-    }
+    },
+    "_id": "669f4fdc50af96fcb62ae75c"
 }
