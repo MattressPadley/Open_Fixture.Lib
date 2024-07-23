@@ -12,7 +12,7 @@
     "Power": {
         "AC_voltage": "90-130V / 180-250V",
         "Power_Draw": 800,
-        "AC_plug": "Edison",
+        "AC_plug": "Edison2",
         "USB_Port": false,
         "Internal_battery": false
     },
