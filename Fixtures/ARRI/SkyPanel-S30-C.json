@@ -22,7 +22,6 @@
         "Beam_Angle": "105\u00b0",
         "Color_Temp": "2800K-10000K",
         "Source": "LED",
-        "LED_Array": "RGBW",
         "Color": true,
         "Pixel_count": 1
     },
