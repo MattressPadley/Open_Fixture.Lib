@@ -20,7 +20,6 @@
         "Beam_Angle": "20\u00b0-60\u00b0",
         "Color_Temp": "6000K",
         "Source": "HMI",
-        "LED_Array": null,
         "Color": false,
         "Pixel_count": 1,
         "Lens": "11-inch Open Face ArriMAX Reflector"
