@@ -63,7 +63,6 @@ jobs:
           message-path: update_output.md
 
       - name: Create branch and commit changes
-        uses: actions/checkout@v4
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
