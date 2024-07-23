@@ -6,10 +6,9 @@ on:
   pull_request:
     types: [closed]
 
-
 jobs:
-  build:
-  if: github.event.pull_request.merged == true
+  updateDB:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -38,11 +37,11 @@ jobs:
           list-files: "json"
 
       - name: Debug JSON files output
-        if: steps.filter.outputs.json == 'true'
+        if: steps.filter.outputs.json != ''
         run: echo '${{ steps.filter.outputs.json_files }}'
 
       - name: Update Fixtures Database
-        if: steps.filter.outputs.json == 'true'
+        if: steps.filter.outputs.json != ''
         id: update
         run: |
           json_files=$(echo '${{ steps.filter.outputs.json_files }}' | jq -r '.[]')
@@ -52,8 +51,7 @@ jobs:
         shell: bash
 
       - name: Comment on PR with update results
-        if: steps.filter.outputs.json == 'true'
+        if: steps.filter.outputs.json != ''
         uses: mshick/add-pr-comment@v2
         with:
           message-path: update_output.md
-
