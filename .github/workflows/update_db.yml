@@ -60,7 +60,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: "Changes from database update, Probably new IDs \n\n[skip actions]"
-          add-path: Fixtures/**/*.json
+          add-paths: Fixtures/**/*.json
           title: "Add new IDs to Fixtures"
           delete-branch: true
           branch: new-ids
