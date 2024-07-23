@@ -12,13 +12,14 @@
     "Power": {
         "AC_voltage": "100-140v",
         "Power_Draw": 1800,
-        "AC_plug": "Edison",
+        "AC_plug": "16a 110v",
         "USB_Port": false,
         "Internal_battery": false
     },
     "Optics": {
         "Beam_Angle": "20\u00b0-60\u00b0",
         "Color_Temp": "6000K",
+        "Source": "HMI",
         "Color": false,
         "Lens": "11-inch Open Face ArriMAX Reflector"
     },

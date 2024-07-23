@@ -31,7 +31,6 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Junior Pin",
-        "IP_Rating": "IP23"
+        "mount": "Junior Pin"
     }
 }
