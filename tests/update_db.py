@@ -45,7 +45,7 @@ def add_id(path, id):
     with open(path, "w") as file:
         json.dump(data, file, indent=4)
     with open("new_ids.txt", "a") as f:
-        f.write(f"{path}")
+        f.write(f"{path}\n")
 
 
 def get_data(path):

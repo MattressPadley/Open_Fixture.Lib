@@ -73,3 +73,4 @@ jobs:
           done
           git commit -m "Update Fixtures database"
           git push origin new-ids
+        shell: bash
