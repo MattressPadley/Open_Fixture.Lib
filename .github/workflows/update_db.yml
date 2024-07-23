@@ -67,5 +67,5 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b new-ids
           git add Fixtures/**/*.json
-          git commit -m "Changes from database update, Probably new IDs"
+          git commit -m "Changes from database update, Probably new IDs \n\n[skip actions]"
           git push origin new-ids
