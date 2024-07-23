@@ -12,6 +12,7 @@
     "Power": {
         "AC_voltage": "100-240V",
         "Power_Draw": 400,
+        "AC_plug": "Edison",
         "DC_Port": "XLR 4-pin",
         "DC_voltage": "48V",
         "USB_Port": true,
@@ -35,6 +36,5 @@
     "Physical": {
         "mount": "Junior Pin",
         "IP_Rating": "IP20"
-    },
-    "_id": "669f4fe76d25386ef0856497"
+    }
 }
