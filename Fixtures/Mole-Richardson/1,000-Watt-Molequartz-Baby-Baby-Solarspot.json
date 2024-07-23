@@ -4,9 +4,9 @@
     "Image": "https://www.mole.com/images/2831_new_large.jpg",
     "Dimensions": {
         "Weight": 9.5,
-        "Height": 9.25,
-        "Width": 7.375,
-        "Depth": 8.875
+        "Height": 9.2,
+        "Width": 7.3,
+        "Depth": 8.8
     },
     "Power": {
         "AC_voltage": "120/240",
@@ -20,7 +20,7 @@
         "Beam_Angle": "21\u00b0 to 70\u00b0",
         "Source": "Quartz",
         "Color_Temp": "3200k",
-        "Lens": "4 15/32 inch Fresnel",
+        "Lens": "4 inch Fresnel",
         "Color": false
     },
     "Control": {
@@ -31,7 +31,6 @@
         "3_Pin_DMX": false
     },
     "Physical": {
-        "mount": "Baby Pin",
-        "IP_Rating": "None"
+        "mount": "Baby Pin"
     }
 }
